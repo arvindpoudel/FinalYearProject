@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reset Password</title>
+  <style>
+body{
+    margin:0;
+    padding:0;
+    background-color: #344a72;
+    height: 100%;
+    overflow:hidden;
+    
+
+
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+     width:400px;
+     background: white;
+     border-radius:10px;
+}
+.container h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid  silver;
+}
+.container form{
+    padding:0 40px;
+    box-sizing: border-box;
+}
+form .c1{
+    position: relative;
+    margin: 20px 0;
+}
+.c1 input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.c1 label{
+    height:100px;
+}
+.container button{
+    width: 100%;
+    background-color: #2691d9;
+    border: 1px solid;
+    border-radius: 5px;
+    height:40px;
+    font-size: 18px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.psw{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+}
+.psw a{
+    text-decoration: none;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Reset Password</h2>
+    <?php if (isset($error_message)) { ?>
+      <div class="error-message"><?php echo $error_message; ?></div>
+    <?php } ?>
+    <?php if (isset($success_message)) { ?>
+      <div class="success-message"><?php echo $success_message; ?></div>
+    <?php } ?>
+    <form method="post" action="">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">New Password</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" name="reset_password" value="Reset Password">
+    </form>
+  </div>
+</body>
+
+</html>

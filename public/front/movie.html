@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="movie.css">
+  </head>
+  <body >
+    <h1>Welcome to Movie Recommendation System</h1>
+    <form>
+      <label for="genre">Choose a Genre:</label>
+      <select id="genre">
+        <option value="">--Select--</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="horror">Horror</option>
+        <option value="romance">Romance</option>
+        <option value="sci-fi">Sci-Fi</option>
+      </select>
+      <br><br>
+      <button type="button" onclick="recommendMovies()">Recommend Movies</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
